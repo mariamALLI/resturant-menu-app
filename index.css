@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Overlock', cursive;
+} 
+
+/* Layout */
+header, main{
+    width: 600px;
+    margin: auto;
+    background-color: #1F2937;
+}
+
+.menu_bg{
+    background-image: url(images/bg\ img.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 30px;
+}
+
+.menus {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.menu-container {
+    display: flex;
+}
+
+.menu-text {
+    line-height: 2;
+}
+
+.menu-btn {
+    margin-top: -24px;
+    padding: 15px;
+    border-radius: 50px;
+    font-size: 1.3rem;
+}
+
+.line {
+    width: 500px;
+    height: 1px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+
+form {
+    width: 400px;
+    height: 445px;
+    background-color: #1F2937;
+    color: #fff;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+
+form button {
+    width: 334px;
+    background-color: #16DB99;
+    padding: 13px 20px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+}
+
+/* typography */
+.menu_bg h1,
+.menu_bg p {
+    line-height: 0.7;
+}
+
+h1,h2,p {
+    color: #fff;
+}
+
+form h2 {
+    text-align: center;
+    line-height: 3;
+}
+
+input {
+    width: 300px;
+    /* height: 70px; */
+    padding: 15px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 25px;
+}

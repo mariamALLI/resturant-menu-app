@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <title>Resturant Menu App</title>
+        <!-- CSS -->
+       <link rel="stylesheet" href="index.css">
+       <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Overlock:wght@400;700;900&display=swap" rel="stylesheet">
+       <!-- Font Awesome CDN -->
+       <script src="https://kit.fontawesome.com/3100053750.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="menu_bg">
+                <!-- <img src="images/bg img.png" alt="burger poster"> -->
+                <h1>Jimmy's Diner</h1>
+                <p>The best burgers and pizzas in town</p>
+            </div>
+        </header>
+        <main>
+            <div class="menus" id="menu-list">
+                <!-- menu list here -->
+                <!-- <div class="menu-container">
+                    <img src="images/pizza.png" alt="pizza 🍕 ">
+
+                    <div class="menu-text">
+                        <h2 class="menu-title">Pizza</h2>
+                        <p class="menu-receipe">pepperoni,mushrom,mozarella</p>
+                        <p class="menu-price">$14</p>
+                    </div>
+                </div>
+                    <button class="menu-btn" id="menu-btn">+</button>
+            </div>
+            <div class="line"></div> -->
+
+            <div class="order" id="order-list"></div>
+        </main>
+
+        <!-- modal pop up for card details -->
+        <form>
+            <h2>Enter card details</h2>
+            
+            <input type="text" 
+            name="cardname" 
+            placeholder="Enter your name" 
+            id="cardname"
+            required
+            >
+
+            <input type="number" 
+            name="card" 
+            placeholder="Enter card number" 
+            id="card"
+            required
+            >
+
+            <input type="number" 
+            name="cvv" 
+            placeholder="Enter CVV" 
+            id="cvv"
+            required
+            >
+            
+            <button id="pay-btn">Pay</button>
+        </form>
+
+        <!-- js script -->
+	<script src="index.js" type="module"></script>
+    </body>
+</html>
+
