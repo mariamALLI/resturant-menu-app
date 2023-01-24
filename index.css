@@ -21,19 +21,19 @@ header, main{
 
 .menus {
     width: 500px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin: 0 auto;
     padding: 20px 0;
 }
 
 .menu-container {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .menu-text {
     line-height: 2;
+    margin-right: 9rem;
 }
 
 .menu-btn {
@@ -46,7 +46,7 @@ header, main{
 .line {
     width: 500px;
     height: 1px;
-    background-color: #fff;
+    background-color: #ffffff8a;
     margin: 0 auto;
 }
 
