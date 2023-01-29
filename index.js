@@ -1,12 +1,16 @@
 import { menuArray } from "./data.js";
 
+// this function handles all the clicks 
 function handleAllBtns(e){
     if(e.target.dataset.menu){
         getAddedOrders(e.target.dataset.menu)
+    }else if (e.target.dataset.remove){
+        removeOrderMenu(e.target.dataset.remove)
     }
 }
 
-
+/*this function handles the template for the listed menu
+displayed on the dom for selection*/
 function getMenuHtml(){
     let menuHtml = '';
     
@@ -22,9 +26,8 @@ function getMenuHtml(){
                     <p class="menu-receipe">${menu.ingredients}</p>
                     <p class="menu-price">$${menu.price}</p>
                 </div>
-                <i class="fa-solid fa-circle-plus menu-btn" id="menu-btn" data-menu="${menu.name}"></i>
-        
         </div>
+                <i class="fa-solid fa-circle-plus menu-btn" id="menu-btn" data-menu="${menu.name}"></i>
 
         <div class="line"></div>
         `
@@ -35,9 +38,11 @@ function getMenuHtml(){
  getMenuHtml()
 
 
-
+/* this variable is an empty array used to push the selected menu
+that will be added to ordered list which appears after the menu is clicked on*/
 let selectedOrderMenu = []
 
+/*this function helps to push tyhe selected order to the orderedlist */
 function getAddedOrders(selectedOrder){
     menuArray.forEach((order)=>{
         if(order.name === selectedOrder){
@@ -50,6 +55,8 @@ function getAddedOrders(selectedOrder){
 
 }
 
+/*this function helps provide the template that will help display
+the ordered menu */
 function orderListMenu(){
     let orderMenu = '';
     let ordered = '';
@@ -58,14 +65,15 @@ function orderListMenu(){
 
     if(selectedOrderMenu.length > 0){
         selectedOrderMenu.forEach((order)=>{
-            orderMenu = '<h2 class="title"> Yourorder</h2>'
+            orderMenu = '<h2 class="title"> Your order</h2>'
 
             ordered += `
                     <div class=order-request>
                        <h2 class="order-title">${order.name}</h2>
                         <button class="remove-btn" id="remove-btn" type="submit" data-remove="${order.name}">remove</button> 
-                        <h3 class="order-price">$${order.price}</h3>
+                        
                     </div>
+                    <h3 class="order-price">$${order.price}</h3>
             ` 
 
             price += order.price
@@ -88,5 +96,17 @@ function orderListMenu(){
 
 
 
+/*this function will help make the remove button present beside each menu item
+in the ordered list section */
+function removeOrderMenu(selectedOrder){
+    let index = ''
+    selectedOrderMenu.forEach((order)=>{
+        index = selectedOrderMenu.indexOf(order.selectedOrder)
+        console.log(index)
+    })
 
-
+    let removeOrder = selectedOrderMenu.splice(index,1)
+    
+    orderListMenu()
+    return removeOrder
+}

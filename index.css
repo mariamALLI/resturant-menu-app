@@ -14,6 +14,10 @@ header, main{
     background-color: #1F2937;
 }
 
+main {
+    height: 1000px;
+}
+
 .menu_bg{
     background-image: url(images/bg\ img.png);
     background-position: center;
@@ -30,13 +34,10 @@ header, main{
 
 .menu-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+    gap: 20px;
 }
-
-/* .menu-txt-btn {
-    display: block;
-} */
 
 figure {
     font-size: 4rem;
@@ -50,6 +51,9 @@ figure {
 .fa-circle-plus {
     font-size: 2.7rem;
     color: #16DB99;
+    margin-top: -5rem;
+    float: right;
+    cursor: pointer;
 }
 
 /* .menu-btn {
@@ -70,19 +74,19 @@ figure {
 .order {
     width: 500px;
     margin: 0 auto;
-    /* height: 300px; */
-    /* background-color: #16DB99; */
 }
 
 .order-request {
     margin-top: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+    gap: 6px;
 }
 
-.order-line {
-   margin-top: 20px;
+.order-price {
+   margin-top: -20px;
+   float: right;
 }
 
 .total {
@@ -92,6 +96,11 @@ figure {
     align-items: center;
     width: 500px;
     margin: 20px auto;
+    border-top: 1px solid #ffffff8a;
+}
+
+.total-title, .ordered-price {
+    margin-top: 10px;
 }
 
 .btn {
@@ -104,6 +113,7 @@ figure {
    font-size: 1.1rem;
    border: none;
    border-radius: 5px; 
+   cursor: pointer;
 }
 
 form {
@@ -135,7 +145,7 @@ form button {
 
 .title{
     text-align: center;
-    margin-top: 3.5rem;
+    margin-top: 2.5rem;
 }
 
 h1,h2,h3,p {
@@ -157,6 +167,9 @@ input {
 }
 
 .remove-btn {
-    font-size: 11px;
+    font-size: 14px;
     color: #ffffff8a;
+    background: transparent;
+    border: none;
+    cursor: pointer;
 }
