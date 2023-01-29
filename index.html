@@ -25,22 +25,21 @@
             </div>
         </header>
         <main>
-            <div class="menus" id="menu-list">
-                <!-- menu list here -->
-                <!-- <div class="menu-container">
-                    <img src="images/pizza.png" alt="pizza 🍕 ">
-
-                    <div class="menu-text">
-                        <h2 class="menu-title">Pizza</h2>
-                        <p class="menu-receipe">pepperoni,mushrom,mozarella</p>
-                        <p class="menu-price">$14</p>
-                    </div>
+            <section>
+                <div class="menus" id="menu-list">
+                    <!-- menu list here -->
                 </div>
-                    <button class="menu-btn" id="menu-btn">+</button>
-            </div>
-            <div class="line"></div> -->
-
-            <div class="order" id="order-list"></div>
+            </section>    
+           
+            <section>
+                <div class="order" id="order-menu"> hello</div>
+                <div class="order list" id="ordered"></div>
+            </section>
+            
+            <section>
+                <div class="total-price" id="total-order"></div>
+            </section>
+           
         </main>
 
         <!-- modal pop up for card details -->
@@ -54,14 +53,14 @@
             required
             >
 
-            <input type="number" 
+            <input type="text" 
             name="card" 
             placeholder="Enter card number" 
             id="card"
             required
             >
 
-            <input type="number" 
+            <input type="text" 
             name="cvv" 
             placeholder="Enter CVV" 
             id="cvv"
@@ -70,6 +69,10 @@
             
             <button id="pay-btn">Pay</button>
         </form>
+
+        <footer>
+            <div class="success-msg" id="success-msg"></div>
+        </footer>
 
         <!-- js script -->
 	<script src="index.js" type="module"></script>
