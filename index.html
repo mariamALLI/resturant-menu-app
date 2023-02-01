@@ -31,48 +31,49 @@
                 </div>
             </section>    
            
-            <section>
+            <section id="order-sec">
                 <div class="order" id="order-menu"></div>
                 <div class="order list" id="ordered"></div>
             </section>
             
-            <section>
+            <section id="total-sec">
                 <div class="total-price" id="total-order"></div>
+            </section>
+
+            <section class="success" id="success">
+                <div class="success-msg" id="success-msg">
+                    <!-- <h2 class="success-txt">Thanks,James! Your order is on its way!</h2> -->
+                </div>
             </section>
            
         </main>
 
         <!-- modal pop up for card details -->
-        <form>
+        <form id="modal-form">
             <h2>Enter card details</h2>
             
             <input type="text" 
-            name="cardname" 
+            id="cardname-input"
             placeholder="Enter your name" 
-            id="cardname"
             required
             >
 
-            <input type="text" 
-            name="card" 
-            placeholder="Enter card number" 
+            <input type="text"  
             id="card"
+            placeholder="Enter 16 digit card number"
             required
             >
 
             <input type="text" 
-            name="cvv" 
-            placeholder="Enter CVV" 
             id="cvv"
+            placeholder="Enter CVV" 
             required
             >
             
-            <button id="pay-btn">Pay</button>
+            <button id="pay-btn" type="submit" data-pay="pay-btn">Pay</button>
         </form>
 
-        <footer>
-            <div class="success-msg" id="success-msg"></div>
-        </footer>
+        
 
         <!-- js script -->
 	<script src="index.js" type="module"></script>

@@ -7,6 +7,10 @@
     font-family: 'Smythe', cursive;
 } 
 
+body {
+    position: relative;
+}
+
 /* Layout */
 header, main{
     width: 600px;
@@ -119,10 +123,16 @@ figure {
 form {
     width: 400px;
     height: 445px;
-    background-color: #1F2937;
+    background-color: hsl(215deg 28% 17% / 90%);
     color: #fff;
-    margin-top: 20px;
     border-radius: 6px;
+    display: none;
+    position: absolute;
+    top: 20rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+    box-shadow: 0px 0px 25px 1px #000;
 }
 
 form button {
@@ -135,6 +145,12 @@ form button {
     color: #fff;
     border: none;
     font-size: 1.2rem;
+}
+
+.success-msg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* typography */
@@ -159,11 +175,17 @@ form h2 {
 
 input {
     width: 300px;
-    /* height: 70px; */
     padding: 15px;
     margin: 0 auto;
     display: block;
     margin-top: 25px;
+}
+
+.success-txt{
+    color: #065F46;
+    background-color: #ECFDF5;
+    text-align: center;
+    padding: 25px 33px;
 }
 
 .remove-btn {

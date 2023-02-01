@@ -1,12 +1,21 @@
 import { menuArray } from "./data.js";
 
+const success = document.getElementById('success');
+const modalForm = document.getElementById('modal-form');
+const cardnameInput = document.getElementById('cardname-input'); 
+
 // this function handles all the clicks 
 function handleAllBtns(e){
     if(e.target.dataset.menu){
         getAddedOrders(e.target.dataset.menu)
     }else if (e.target.dataset.remove){
         removeOrderMenu(e.target.dataset.remove)
-    }
+    }else if(e.target.dataset.complete){
+        completeOrder()
+    } /*else if(e.target.dataset.pay){
+        payment()
+        
+    }*/
 }
 
 /*this function handles the template for the listed menu
@@ -84,7 +93,7 @@ function orderListMenu(){
                     <p class="ordered-price">$${price}</p>
                 </div>
 
-                <button class="btn" id="complete-order-btn" type="submit">Complete order</button>
+                <button class="btn" id="complete-order-btn" type="submit" data-complete="order">Complete order</button>
             `
         })
     }
@@ -110,3 +119,32 @@ function removeOrderMenu(selectedOrder){
     orderListMenu()
     return removeOrder
 }
+
+
+/*this function will help complete order menu seleted and display a modal
+pop up for payment details */
+function completeOrder(){
+    document.querySelector('form').style.display = 'block';
+}
+
+function payment(){
+
+
+
+    document.getElementById('order-sec').style.display = 'none'
+    document.getElementById('total-sec').style.display = 'none'
+    document.getElementById('success-msg').innerHTML = `
+    <h2 class="success-txt">Thanks,${cardnameInput.value}! Your order is on its way!</h2>
+    `
+    // success.style.display = 'block'
+    setTimeout(()=>{
+        success.style.display = 'block'
+        },1500)
+    
+}
+
+modalForm.addEventListener('submit', ()=>{
+    payment()
+    document.querySelector('form').style.display = 'none'
+    // success.style.display = 'block'    
+})
