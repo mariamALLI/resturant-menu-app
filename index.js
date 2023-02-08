@@ -3,6 +3,7 @@ import { menuArray } from "./data.js";
 const success = document.getElementById('success');
 const modalForm = document.getElementById('modal-form');
 const cardnameInput = document.getElementById('cardname-input'); 
+const closeBtn = document.getElementById("close-btn")
 
 // this function handles all the clicks 
 function handleAllBtns(e){
@@ -147,4 +148,8 @@ modalForm.addEventListener('submit', ()=>{
     payment()
     document.querySelector('form').style.display = 'none'
     // success.style.display = 'block'    
+})
+
+closeBtn.addEventListener('click', ()=> {
+    document.querySelector('form').style.display = 'none'
 })

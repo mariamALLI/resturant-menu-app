@@ -60,14 +60,6 @@ figure {
     cursor: pointer;
 }
 
-/* .menu-btn {
-    background-color: #16DB99;
-    margin-top: -24px;
-    padding: 15px;
-    border-radius: 50px;
-    font-size: 1.3rem;
-} */
-
 .line {
     width: 500px;
     height: 1px;
@@ -145,6 +137,20 @@ form button {
     color: #fff;
     border: none;
     font-size: 1.2rem;
+}
+
+form .close-btn {
+    font-size: 1.2rem;
+    border: none;
+    background-color: transparent;
+    position: relative;
+    top: -24.5rem;
+    right: -11rem;
+}
+
+form .close-btn:hover {
+    cursor: pointer;
+    color: #16DB99;
 }
 
 .success-msg {
