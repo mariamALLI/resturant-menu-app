@@ -140,7 +140,7 @@ function payment(){
     // success.style.display = 'block'
     setTimeout(()=>{
         success.style.display = 'block'
-        },1500)
+        },2000)
     
 }
 
